@@ -1,0 +1,36 @@
+[colors.primary]
+background = "#262626"
+foreground = "#c0b18b"
+
+[cursor]
+blink_interval = 500
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[font]
+size = 13.0
+
+[font.italic]
+family = "FantasqueSansM Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "FantasqueSansM Nerd Font Mono"
+style = "Regular"
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[window]
+decorations = "full"
+
+[env]
+TERM = "xterm-256color"
+# Set horizontal splits to appear to the right

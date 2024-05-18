@@ -1,0 +1,69 @@
+[colors.bright]
+black = "#656565"
+blue = "#22c3a1"
+cyan = "#84edb9"
+green = "#8fee96"
+magenta = "#775759"
+red = "#d75f5f"
+white = "#d8d8d8"
+yellow = "#cd950c"
+
+[colors.cursor]
+cursor = "#8fee96"
+text = "#2f2f2f"
+
+[colors.normal]
+black = "#2f2f2f"
+blue = "#22c3a1"
+cyan = "#84edb9"
+green = "#d4d232"
+magenta = "#775759"
+red = "#d75f5f"
+white = "#c0b18b"
+yellow = "#af865a"
+
+[colors.primary]
+background = "#262626"
+foreground = "#c0b18b"
+
+[colors.selection]
+background = "#d75f5f"
+text = "#2f2f2f"
+
+[cursor]
+blink_interval = 500
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[font]
+size = 12.0
+
+
+[font.italic]
+family = "FantasqueSansM Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "FantasqueSansM Nerd Font Mono"
+style = "Regular"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 2000
+multiplier = 5
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[window]
+decorations = "full"
+
+[window.padding]
+x = 15
+y = 15
