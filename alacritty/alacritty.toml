@@ -11,7 +11,7 @@ blinking = "On"
 shape = "Block"
 
 [font]
-size = 13.0
+size = 16.0
 
 [font.italic]
 family = "FantasqueSansM Nerd Font Mono"

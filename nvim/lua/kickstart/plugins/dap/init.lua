@@ -3,7 +3,6 @@ return {
 	lazy = true, -- Lazy load on key mappings
 
 	dependencies = {
-		{ "nvim-treesitter/nvim-treesitter", opts = {} }, -- Ensure nvim-treesitter is loaded first
 		{
 			"theHamsta/nvim-dap-virtual-text",
 			opts = {}, -- Ensure nvim-dap-virtual-text is loaded after nvim-treesitter
