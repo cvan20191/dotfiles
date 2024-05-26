@@ -65,5 +65,6 @@ return {
 		--MORE when eneded
 		--require("kickstart.plugins.dap.settings.codelldb")
 		--require("kickstart.plugins.dap.settings.codelldb")
+--		require("dap").repl.open({}, "vsplit")
 	end,
 }
