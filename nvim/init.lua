@@ -176,20 +176,23 @@ vim.opt.hlsearch = true
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true })
 vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
-
-vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "swap selected text" })
+vim.keymap.set("n", "e", "a")
+vim.keymap.set("x", "<leader>p", [["_dp]], { desc = "swap selected text" })
 -- This is going to get me cancelled
 -- Map <C-c> in insert mode to <Esc>
 vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true, silent = true })
 
+--remap control _ because mech keyboard
+vim.keymap.set("n", "e", "a")
 --mine
---
 --vim.opt.bg = "dark"
 vim.opt.background = "dark"
+vim.keymap.set("n", "<C-n>", "Nzzzv")
+--vim.keymap.set("n", "<C-i>", "<C-i>zz")
+--vim.keymap.set("n", "<C-o>", "<C-o>zz")
 vim.opt.hlsearch = true
 vim.api.nvim_set_hl(0, "@function.call", { fg = "#b8bb26", bold = true }) -- Example Gruvbox color
 --toggle diagnostics but doe snot turn off sidebrs also
@@ -242,10 +245,10 @@ vim.keymap.set("n", "<leader>f", ":w<CR>", { desc = "[F]ind file" })
 --  use ctrl+<hjkl> to switch between windows
 --
 --  see `:help wincmd` for a list of all window commands
-vim.keymap.set("n", "<c-h>", "<c-w><c-h>", { desc = "move focus to the left window" })
-vim.keymap.set("n", "<c-l>", "<c-w><c-l>", { desc = "move focus to the right window" })
-vim.keymap.set("n", "<c-j>", "<c-w><c-j>", { desc = "move focus to the lower window" })
-vim.keymap.set("n", "<c-k>", "<c-w><c-k>", { desc = "move focus to the upper window" })
+--vim.keymap.set("n", "<c-h>", "<c-w><c-h>", { desc = "move focus to the left window" })
+--vim.keymap.set("n", "<c-l>", "<c-w><c-l>", { desc = "move focus to the right window" })
+--vim.keymap.set("n", "<c-j>", "<c-w><c-j>", { desc = "move focus to the lower window" })
+--vim.keymap.set("n", "<c-k>", "<c-w><c-k>", { desc = "move focus to the upper window" })
 
 -- [[ basic autocommands ]]
 --
@@ -354,7 +357,6 @@ require("lazy").setup({
 				end,
 			},
 			{ "nvim-telescope/telescope-ui-select.nvim" },
-
 			-- useful for getting pretty icons, but requires a nerd font.
 			--{ 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
 		},
