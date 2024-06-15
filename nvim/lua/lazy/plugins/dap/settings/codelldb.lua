@@ -24,14 +24,8 @@ dap.configurations.cpp = {
 		end,
 		cwd = "${workspaceFolder}",
 		stopOnEntry = false,
-		args = {
-			"--queue",
-			"--output",
-			"M",
-		},
-		stdio = { "spec-M.txt", nil, nil }, -- Redirect stdin from spec-M.txt
+		args = {},
+		stdio = { "test-2-cmds.txt", nil, nil }, -- Redirect stdin from spec-M.txt
 		runInTerminal = false,
 	},
 }
---dap.configurations.c = dap.configurations.cpp
---dap.configurations.rust = dap.configurations.cpp

@@ -74,8 +74,8 @@ return {
 
 		-- PreProc and MatchParen
 		-- Set matching parenthesis to be neon green
---		vim.cmd.hi("PreProc guifg=#8fee96")
---		vim.cmd.hi("MatchParen guifg=#8fee96")
+		--		vim.cmd.hi("PreProc guifg=#8fee96")
+		--		vim.cmd.hi("MatchParen guifg=#8fee96")
 
 		-- Tab-bar colors
 		--		vim.cmd.hi("TabLine guifg=#656565 guibg=#2f2f2f")
