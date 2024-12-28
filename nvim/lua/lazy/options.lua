@@ -10,7 +10,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.updatetime = 0
 --vim.opt.timeoutlen = 60
-
+--
 vim.opt.splitright = true
 --vim.opt.splitbelow = false
 vim.opt.undolevels = 10000
@@ -23,7 +23,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
 })
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
-
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 

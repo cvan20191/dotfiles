@@ -25,20 +25,17 @@ return {
 		require("telescope").setup({
 			defaults = {
 				preview = {
-					treesitter = false,
+					treesitter = true,
 				},
 			},
 		})
 		pcall(require("telescope").load_extension, "fzf")
 		pcall(require("telescope").load_extension, "ui-select")
-
 		local builtin = require("telescope.builtin")
-		vim.keymap.set("n", "<leader>fsw", builtin.grep_string, { desc = "[s]earch current [w]ord" })
-		--   vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[s]earch by [g]rep' })
-		vim.keymap.set("n", "<leader>fse", builtin.diagnostics, { desc = "document [e]rrors" })
+		vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[s]earch current [w]ord" })
+		vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[s]earch by [g]rep" })
+		vim.keymap.set("n", "<leader>se", builtin.diagnostics, { desc = "document [e]rrors" })
 		vim.keymap.set("n", "<leader>f.", builtin.oldfiles, { desc = '[f]ind recent files ("." for repeat)' })
-		vim.keymap.set("n", "<leader>fsn", function()
-			builtin.find_files({ cwd = vim.fn.stdpath("config") })
-		end, { desc = "[f]ind [n]eovim files" })
+		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[S]earch [F]iles" })
 	end,
 }

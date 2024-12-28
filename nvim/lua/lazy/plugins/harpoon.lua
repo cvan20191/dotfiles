@@ -12,7 +12,7 @@ return {
 	keys = function()
 		local keys = {
 			{
-				"<leader>H",
+				"<leader>ha",
 				function()
 					require("harpoon"):list():add()
 				end,
@@ -26,17 +26,44 @@ return {
 				end,
 				desc = "Harpoon Quick Menu",
 			},
+			{
+				"♠",
+				mode = "n",
+				function()
+					local harpoon = require("harpoon")
+					harpoon:list():select(1)
+				end,
+				desc = "Harpoon Quick Menu",
+			},
+			{
+				"♡",
+				mode = "n",
+				function()
+					local harpoon = require("harpoon")
+					harpoon:list():select(2)
+				end,
+				desc = "Harpoon Quick Menu",
+			},
+			{
+				"♢",
+				mode = "n",
+				function()
+					local harpoon = require("harpoon")
+					harpoon:list():select(3)
+				end,
+				desc = "Harpoon Quick Menu",
+			},
+			{
+				"♣",
+				mode = "n",
+				function()
+					local harpoon = require("harpoon")
+					harpoon:list():select(4)
+				end,
+				desc = "Harpoon Quick Menu",
+			},
 		}
 
-		for i = 1, 5 do
-			table.insert(keys, {
-				"<leader>" .. i,
-				function()
-					require("harpoon"):list():select(i)
-				end,
-				desc = "Harpoon to File " .. i,
-			})
-		end
 		return keys
 	end,
 }

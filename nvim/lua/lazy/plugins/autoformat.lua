@@ -2,7 +2,7 @@ return {
 	"stevearc/conform.nvim",
 	keys = {
 		{
-			"<leader>s",
+			"<leader>ss",
 			function()
 				require("conform").format({ async = true, lsp_fallback = true })
 				vim.cmd("write")
