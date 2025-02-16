@@ -20,9 +20,6 @@ return {
 					require("telescope.themes").get_dropdown(),
 				},
 			},
-		})
-
-		require("telescope").setup({
 			defaults = {
 				preview = {
 					treesitter = true,

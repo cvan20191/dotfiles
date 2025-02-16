@@ -48,3 +48,6 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 -- Set highlight on search, but clear on pressng <Esc> in normal mode
 vim.opt.hlsearch = true
+
+vim.opt.autoindent = true
+vim.opt.smartindent = true

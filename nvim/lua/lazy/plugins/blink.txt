@@ -1,0 +1,56 @@
+return {
+	"saghen/blink.cmp",
+	-- optional: provides snippets for the snippet source
+    dependencies = {
+        "rafamadriz/friendly-snippets",
+  },
+	version = "*",
+	opts = {
+		snippets = {
+			expand = function(args)
+				-- Use luasnip for snippet expansion
+		--		require("luasnip").lsp_expand(args.body)
+			end,
+		},
+		appearance = {
+			use_nvim_cmp_as_default = false,
+			--nerd_font_variant = "mono",
+		},
+		-- Default list of enabled providers defined so that you can extend it
+		-- elsewhere in your config, without redefining it, due to `opts_extend`
+		--
+		completion = {
+			accept = {
+				-- experimental auto-brackets support
+				auto_brackets = {
+					enabled = true,
+				},
+			},
+			menu = {
+				draw = {
+					treesitter = { "lsp" },
+				},
+			},
+			documentation = {
+				auto_show = true,
+				auto_show_delay_ms = 10,
+			},
+			ghost_text = {
+				enabled = false,
+			},
+		},
+		sources = {
+			-- adding any nvim-cmp sources here will enable them
+			-- with blink.compat
+			--			compat = {},
+			default = { "lsp", "path", "snippets", "buffer" },
+			cmdline = {},
+		},
+		signature = { enabled = true },
+		keymap = {
+preset = "enter",
+    ["<C-y>"] = { "select_and_accept" },
+		},
+	},
+	opts_extend = { "sources.default" },
+}
